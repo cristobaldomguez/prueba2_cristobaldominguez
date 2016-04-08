@@ -1,0 +1,6 @@
+      invoke  active_record
+      create    db/migrate/20160408225343_create_inventaries.rb
+      create    app/models/inventary.rb
+      invoke    test_unit
+      create      test/models/inventary_test.rb
+      create      test/fixtures/inventaries.yml
