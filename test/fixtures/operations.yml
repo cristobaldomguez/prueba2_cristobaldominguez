@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+op01:
+  employee: Braulio
+  name: Operacion01
+
+op02:
+  employee: Bryson
+  name: Operacion02
+
+op03:
+  employee: Ryan
+  name: Operacion03

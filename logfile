@@ -9,3 +9,8 @@ ERROR:  database "prueba2_cristobaldominguez_development" already exists
 STATEMENT:  CREATE DATABASE "prueba2_cristobaldominguez_development" ENCODING = 'unicode'
 ERROR:  database "prueba2_cristobaldominguez_test" already exists
 STATEMENT:  CREATE DATABASE "prueba2_cristobaldominguez_test" ENCODING = 'unicode'
+ERROR:  relation "who_dids" does not exist
+STATEMENT:  ALTER TABLE "operations" ADD CONSTRAINT "fk_rails_9fadf32884"
+	FOREIGN KEY ("who_did_id")
+	  REFERENCES "who_dids" ("id")
+	
