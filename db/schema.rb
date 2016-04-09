@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160408231426) do
+ActiveRecord::Schema.define(version: 20160409005658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,9 +27,12 @@ ActiveRecord::Schema.define(version: 20160408231426) do
     t.string   "sku"
     t.text     "description"
     t.integer  "wheel_size"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "operation_id"
   end
+
+  add_index "inventaries", ["operation_id"], name: "index_inventaries_on_operation_id", using: :btree
 
   create_table "operations", force: :cascade do |t|
     t.integer  "employee_id"
@@ -40,5 +43,6 @@ ActiveRecord::Schema.define(version: 20160408231426) do
 
   add_index "operations", ["employee_id"], name: "index_operations_on_employee_id", using: :btree
 
+  add_foreign_key "inventaries", "operations"
   add_foreign_key "operations", "employees"
 end

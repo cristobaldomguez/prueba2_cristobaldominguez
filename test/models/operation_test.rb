@@ -9,4 +9,8 @@ class OperationTest < ActiveSupport::TestCase
     t = operations(:op01)
     assert_not t.valid?, 'La operación bebe tener un empleado relacionado'
   end
+
+  #test "get item from inventary" do
+  #
+  #end
 end
