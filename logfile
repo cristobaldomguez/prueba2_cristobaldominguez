@@ -14,3 +14,8 @@ STATEMENT:  ALTER TABLE "operations" ADD CONSTRAINT "fk_rails_9fadf32884"
 	FOREIGN KEY ("who_did_id")
 	  REFERENCES "who_dids" ("id")
 	
+ERROR:  syntax error at or near "employees" at character 10
+STATEMENT:  select * employees
+	;
+ERROR:  syntax error at or near "employee" at character 10
+STATEMENT:  select * employee;
