@@ -19,3 +19,7 @@ STATEMENT:  select * employees
 	;
 ERROR:  syntax error at or near "employee" at character 10
 STATEMENT:  select * employee;
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
